@@ -27,9 +27,15 @@ EOF
 sysctl -p
 
 ##配置镜像加速，这里使用daocloud，请自行注册docloud账号替换链接
-curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io
+curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io >> /dev/null
 
 ##重启docker服务
 systemctl restart docker.service
+
+#查看docker版本
+echo
+echo "##########################Docker版本###############################"
+docker --version
+
 
 
