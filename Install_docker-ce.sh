@@ -2,7 +2,7 @@
 #this script is for Install the lastest version of docker-ce
 
 #卸载旧版本docker
-yum remove docker-ce
+yum remove -y docker-ce
 rm -rf /var/lib/docker
 
 #安装依赖软件包
