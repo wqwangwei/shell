@@ -31,11 +31,18 @@ net.bridge.bridge-nf-call-iptables = 1
 EOF
 sysctl -p
 
-##配置镜像加速，这里使用daocloud，请自行注册docloud账号替换链接
-curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io >> /dev/null
+##配置阿里云镜像加速
+tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://uyah70su.mirror.aliyuncs.com"]
+}
+EOF
+
+##配置daocloud镜像加速
+#curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io >> /dev/null
 
 ##重启docker服务
-systemctl restart docker.service
+systemctl daemon-reload && systemctl restart docker.service
 
 #查看docker版本
 echo
