@@ -8,7 +8,8 @@ rm -rf /var/lib/docker
 #安装依赖软件包
 yum install -y yum-utils \
 	device-mapper-persistent-data \
-	lvm2
+	lvm2 \
+	git
 	
 #导入yum源	
 yum-config-manager \
