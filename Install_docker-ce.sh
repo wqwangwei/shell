@@ -17,7 +17,10 @@ yum-config-manager \
     http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 
 #安装docker
-yum install docker-ce -y
+#yum install docker-ce -y
+
+#安装特定版本docker
+yum install -y docker-ce-18.06.1.ce-3.el7
 
 #启动docker
 systemctl start docker && systemctl enable docker
