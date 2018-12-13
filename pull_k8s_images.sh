@@ -13,14 +13,12 @@
 set -e
 
 #运行kubeadm config images list确认指定版本
-## 版本信息
 K8S_VERSION=v1.13.0
 ETCD_VERSION=3.2.24
 DASHBOARD_VERSION=v1.10.0
 FLANNEL_VERSION=v0.10.0-amd64
 DNS_VERSION=1.2.6
 PAUSE_VERSION=3.1
-
 
 ## 拉取images
 docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver-amd64:$K8S_VERSION
@@ -44,7 +42,7 @@ docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:$DNS_VERS
 docker tag registry.cn-hangzhou.aliyuncs.com/kubernetes_containers/flannel:$FLANNEL_VERSION quay.io/coreos/flannel:$FLANNEL_VERSION
 docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/kubernetes-dashboard-amd64:$DASHBOARD_VERSION k8s.gcr.io/kubernetes-dashboard-amd64:$DASHBOARD_VERSION
 
-## 删除镜像
+## 删除原镜像
 docker rmi registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver-amd64:$K8S_VERSION
 docker rmi registry.cn-hangzhou.aliyuncs.com/google_containers/kube-controller-manager-amd64:$K8S_VERSION
 docker rmi registry.cn-hangzhou.aliyuncs.com/google_containers/kube-scheduler-amd64:$K8S_VERSION
