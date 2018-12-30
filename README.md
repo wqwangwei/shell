@@ -5,6 +5,7 @@ bash https://raw.githubusercontent.com/zhwill/LinuxShell/master/Install_docker-c
 
 ### Install git
 CentOS7编译安装
+
 bash https://raw.githubusercontent.com/zhwill/LinuxShell/master/git-install.sh
 
 ### Pull k8s images
