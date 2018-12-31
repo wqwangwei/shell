@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #卸载旧版本git
-yum remove -git
+yum remove -y git
 
 #安装编译环境依赖包
 yum install -y gcc gcc-c++
