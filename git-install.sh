@@ -18,7 +18,7 @@ cd git-2.20.1
 ./configure --prefix=/usr/local/git
 make && make install
 
-# 配置环境变量
+#配置环境变量
 cat >> /etc/profile << EOF
 export PATH=/usr/local/git/bin:$PATH
 EOF
