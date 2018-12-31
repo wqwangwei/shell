@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #卸载旧版本git
 yum remove git
 
