@@ -9,8 +9,9 @@ wget -O- https://raw.githubusercontent.com/zhwill/LinuxShell/master/git-install.
 wget -O- https://raw.githubusercontent.com/zhwill/LinuxShell/master/pull_k8s_images.sh | sh
 
 #pull-aliyun-images
-https://raw.githubusercontent.com/zhwill/LinuxShell/master/pull-aliyun-images.sh
+wget -O- https://raw.githubusercontent.com/zhwill/LinuxShell/master/pull-aliyun-images.sh | sh
 
 #push-aliyun-images
-https://raw.githubusercontent.com/zhwill/LinuxShell/master/push-aliyun-images.sh
+wget -O- https://raw.githubusercontent.com/zhwill/LinuxShell/master/push-aliyun-images.sh | sh
+
 ```
