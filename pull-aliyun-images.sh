@@ -1,10 +1,9 @@
 #!/bin/bash
 
-#从ImagePath.txt文件获取镜像路径
-for ImagePath in $(cat /root/ImagePath.txt)
+for imagepath in $(cat $HOME/imagepath.txt)
 do
-ImageName=$(echo $ImagePath | awk -F '/' '{print $NF}')
-docker pull registry.cn-hangzhou.aliyuncs.com/aliwill/$ImageName
-docker tag registry.cn-hangzhou.aliyuncs.com/aliwill/$ImageName $ImagePath
-docker rmi registry.cn-hangzhou.aliyuncs.com/aliwill/$ImageName
+imagename=$(echo $imagepath | awk -F '/' '{print $NF}')
+docker pull registry.cn-hangzhou.aliyuncs.com/aliwill/$imagename
+docker tag registry.cn-hangzhou.aliyuncs.com/aliwill/$imagename $imagepath
+docker rmi registry.cn-hangzhou.aliyuncs.com/aliwill/$imagename
 done 

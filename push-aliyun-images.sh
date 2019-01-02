@@ -1,9 +1,9 @@
 #!/bin/bash
 
-for ImagePath in $(cat /root/ImagePath.txt)
+for imagepath in $(cat $HOME/imagepath.txt)
 do
-ImageName=$(echo $ImagePath | awk -F '/' '{print $NF}')
-docker pull $ImagePath
-docker tag $ImagePath registry.cn-hangzhou.aliyuncs.com/aliwill/$ImageName
-docker push registry.cn-hangzhou.aliyuncs.com/aliwill/$ImageName
+imagename=$(echo $image-path | awk -F '/' '{print $NF}')
+docker pull $imagepath
+docker tag $imagepath registry.cn-hangzhou.aliyuncs.com/aliwill/$imagename
+docker push registry.cn-hangzhou.aliyuncs.com/aliwill/$imagename
 done
