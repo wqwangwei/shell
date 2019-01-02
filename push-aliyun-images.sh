@@ -2,7 +2,7 @@
 
 for imagepath in $(cat $HOME/imagepath.txt)
 do
-imagename=$(echo $image-path | awk -F '/' '{print $NF}')
+imagename=$(echo $imagepath | awk -F '/' '{print $NF}')
 docker pull $imagepath
 docker tag $imagepath registry.cn-hangzhou.aliyuncs.com/aliwill/$imagename
 docker push registry.cn-hangzhou.aliyuncs.com/aliwill/$imagename
