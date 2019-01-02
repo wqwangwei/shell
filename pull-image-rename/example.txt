@@ -1,0 +1,8 @@
+#批量修改文件名称
+[root@localhost coredns]# ll
+-rw-r--r-- 1 root root  0 Jan  2 01:49 coredns:1.2.4
+#执行脚本
+[root@localhost coredns]# for file in $(ls); do  newfile=$(echo $file | awk -F : '{print $2".tag"}');  mv $file $newfile; done  
+#修改后效果
+[root@localhost coredns]# 
+-rw-r--r-- 1 root root 44 Apr  3  2018 1.2.4.tag
