@@ -14,11 +14,20 @@ echo -e "\033[31m 这是centos7系统初始化脚本，将更新系统内核至�
 read -s -n1 -p "Press any key to continue or ctrl+C to cancel"
 echo "Your inputs: $REPLY"
 
-#1.安装阿里yum源、epel源
+# 安装阿里yum源、epel源
 yum_config() {
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
-wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+cd /etc/yum.repos.d/
+curl -O http://mirrors.aliyun.com/repo/Centos-7.repo
+cd
 yum install -y epel-release
+}
+
+# 定义安装常用工具的函数
+yum_tools() {
+yum install –y vim wget bash-completion lsof iotop iostat unzip bzip2 bzip2-devel bridge-utils tree
+yum install –y gcc gcc-c++ make cmake autoconf openssl-devel openssl-perl net-tools
+source /usr/share/bash-completion/bash_completion
 }
 
 #2.定义配置NTP的函数
@@ -40,13 +49,6 @@ timedatectl set-ntp true
 close_firewalld() {
 systemctl stop firewalld && systemctl disable firewalld &> /dev/null 
 sed -i 's/^SELINUX=enforcing$/SELINUX=disabled/' /etc/selinux/config && setenforce 0
-}
-
-#4.定义安装常用工具的函数
-yum_tools() {
-yum install –y vim wget bash-completion lsof iotop iostat unzip bzip2 bzip2-devel bridge-utils tree
-yum install –y gcc gcc-c++ make cmake autoconf openssl-devel openssl-perl net-tools
-source /usr/share/bash-completion/bash_completion
 }
 
 #5.定义升级最新内核的函数
