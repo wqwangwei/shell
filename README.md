@@ -1,6 +1,6 @@
 ```
 #Install docker-ce
-wget -O- https://raw.githubusercontent.com/zhwill/LinuxShell/master/Install_docker-ce.sh | sh
+wget https://raw.githubusercontent.com/zhwill/LinuxShell/master/Install_docker-ce.sh | bash Install_docker-ce.sh
 
 #Install git
 wget -O- https://raw.githubusercontent.com/zhwill/LinuxShell/master/git-install.sh | sh
@@ -13,5 +13,8 @@ wget -O- https://raw.githubusercontent.com/zhwill/LinuxShell/master/pull-aliyun-
 
 #push-aliyun-images
 wget -O- https://raw.githubusercontent.com/zhwill/LinuxShell/master/push-aliyun-images.sh | sh
+
+#centos7_init
+wget https://raw.githubusercontent.com/zhwill/LinuxShell/master/centos7_init.sh && bash centos7_init.sh
 
 ```
