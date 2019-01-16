@@ -1,6 +1,6 @@
 ```
 #Install docker-ce
-wget -O- https://raw.githubusercontent.com/zhwill/LinuxShell/master/Install_docker-ce.sh | sh
+wget https://raw.githubusercontent.com/zhwill/LinuxShell/master/Install_docker-ce.sh | bash Install_docker-ce.sh
 
 #Install git
 wget -O- https://raw.githubusercontent.com/zhwill/LinuxShell/master/git-install.sh | sh
