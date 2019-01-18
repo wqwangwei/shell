@@ -1,5 +1,9 @@
 #!/bin/bash
-#this script is for Install the lastest version of docker-ce
+#install docker-ce
+set -e
+
+#指定安装的docker版本
+docker_version=docker-ce-18.06.1.ce-3.el7
 
 #卸载旧版本docker
 yum remove -y docker-ce
@@ -15,15 +19,8 @@ yum install -y yum-utils \
 yum-config-manager \
     --add-repo \
     http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-
 #安装docker
-#yum install docker-ce -y
-
-#安装特定版本docker
-yum install -y docker-ce-18.06.1.ce-3.el7
-
-#启动docker
-systemctl start docker && systemctl enable docker
+yum install -y $docker_version
 
 #配置镜像加速
 
@@ -44,7 +41,7 @@ sysctl -p
 ##配置daocloud镜像加速
 curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io >> /dev/null
 
-##重启docker服务
+##启动docker服务
 systemctl daemon-reload && systemctl restart docker.service
 
 #查看docker版本
