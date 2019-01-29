@@ -45,8 +45,7 @@ curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2
 systemctl daemon-reload && systemctl restart docker.service
 
 #查看docker版本
-echo
-echo "##########################Docker版本###############################"
+echo "#########The installation finished! docker version##########"
 docker --version
 
 
