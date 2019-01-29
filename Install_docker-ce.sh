@@ -6,6 +6,7 @@ set -e
 docker_version=docker-ce-18.06.1.ce-3.el7
 
 #卸载旧版本docker
+yum remove -y docker
 yum remove -y docker-ce
 rm -rf /var/lib/docker
 
