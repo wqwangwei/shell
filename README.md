@@ -1,6 +1,6 @@
 ```
 #Install docker-ce
-curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/Install_docker-ce.sh | sh
+curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker-ce.sh | sh
 
 #Install git
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/git-install.sh | sh
