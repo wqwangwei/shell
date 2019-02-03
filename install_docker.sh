@@ -3,12 +3,12 @@
 set -e
 
 #指定安装的docker版本
-docker_version=docker-ce-18.06.1.ce-3.el7
+docker_version=docker-ce
 
 #卸载旧版本docker
 yum remove -y docker
 yum remove -y docker-ce
-rm -rf /var/lib/docker
+mv  /var/lib/docker /tmp
 
 #安装依赖软件包
 yum install -y yum-utils \
@@ -22,8 +22,6 @@ yum-config-manager \
     http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 #安装docker
 yum install -y $docker_version
-
-#配置镜像加速
 
 ##修改内核参数
 cat >> /etc/sysctl.conf << EOF
@@ -43,11 +41,8 @@ sysctl -p
 curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io >> /dev/null
 
 ##启动docker服务
-systemctl daemon-reload && systemctl restart docker.service
+systemctl daemon-reload && systemctl restart docker.service && systemctl enable docker.service
 
 #查看docker版本
 echo "#########The installation finished! docker version##########"
 docker --version
-
-
-
