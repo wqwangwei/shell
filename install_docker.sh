@@ -8,7 +8,6 @@ docker_version=docker-ce
 #卸载旧版本docker
 yum remove -y docker
 yum remove -y docker-ce
-mv  /var/lib/docker /tmp
 
 #安装依赖软件包
 yum install -y yum-utils \
