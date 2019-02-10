@@ -22,13 +22,6 @@ yum-config-manager \
 #安装docker
 yum install -y $docker_version
 
-##修改内核参数
-cat >> /etc/sysctl.conf << EOF
-net.bridge.bridge-nf-call-ip6tables = 1
-net.bridge.bridge-nf-call-iptables = 1
-EOF
-sysctl -p
-
 ##配置阿里云镜像加速
 #tee /etc/docker/daemon.json <<-'EOF'
 #{
