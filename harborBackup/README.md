@@ -1,6 +1,6 @@
 ## Backup harbor registry images 
 
-Backup harbor registry images to local server whem you do a reinstall.
+Backup harbor registry images to local server when you do a reinstall.
 
 修改参数:
 ```
