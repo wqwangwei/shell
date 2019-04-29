@@ -23,14 +23,14 @@ yum-config-manager \
 yum install -y $docker_version
 
 ##配置阿里云镜像加速
-#tee /etc/docker/daemon.json <<-'EOF'
-#{
-#  "registry-mirrors": ["https://uyah70su.mirror.aliyuncs.com"]
-#}
-#EOF
+tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://uyah70su.mirror.aliyuncs.com"]
+}
+EOF
 
 ##配置daocloud镜像加速
-curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io >> /dev/null
+#curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io >> /dev/null
 
 ##启动docker服务
 systemctl daemon-reload && systemctl restart docker.service && systemctl enable docker.service
