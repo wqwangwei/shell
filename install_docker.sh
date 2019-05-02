@@ -32,11 +32,11 @@ tee /etc/docker/daemon.json <<-'EOF'
 }
 EOF
 
-#重启docker服务
-systemctl daemon-reload && systemctl restart docker.service
-
 ##配置daocloud镜像加速
 #curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://f1361db2.m.daocloud.io >> /dev/null
+
+#重启docker服务
+systemctl daemon-reload && systemctl restart docker.service
 
 #查看docker版本
 echo "#########The installation finished! docker version##########"
