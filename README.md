@@ -1,6 +1,5 @@
 ## Install docker-ce
 ```
-#Install docker-ce
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
 ```
 
