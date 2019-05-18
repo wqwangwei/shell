@@ -4,6 +4,11 @@
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
 ```
 
+## docker run shadowsock
+```
+curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/shadowsocks/docker_run_ssr.sh | sh
+```
+
 ## Install git
 ```
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/git-install.sh | sh
