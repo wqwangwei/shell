@@ -6,7 +6,7 @@ curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docke
 
 ## docker run shadowsock
 ```
-curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/shadowsocks/docker_run_ssr.sh | sh
+curl -O https://raw.githubusercontent.com/willzhang/shell/master/shadowsocks/docker_run_ssr.sh && bash docker_run_ssr.sh
 ```
 
 ## Install git
