@@ -17,6 +17,7 @@ if [ $? -eq 0 ];then
   yum install expect -y
 fi
 
+#rm all ssh-key,create new one
 mv -f /root/.ssh/* /tmp/
 ssh-keygen -t rsa -N '' -f /root/.ssh/id_rsa -q
 
@@ -29,6 +30,7 @@ expect {
         "(yes/no)" {send "yes\r"; exp_continue}
         "*password*" {send "$password\r"}
 }
+
 #测试自动登录是否成功
 spawn ssh root@$ip
 expect { 
