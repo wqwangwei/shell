@@ -5,7 +5,6 @@ cat > $SHELL_PATH/ip_passwd.txt << EOF
 192.168.93.11 123457
 192.168.93.12 123456
 192.168.93.13 123456
-192.168.93.14 123456
 192.168.93.15 123456
 EOF
 
@@ -52,4 +51,4 @@ cat $SHELL_PATH/auto_ssh.log | grep successfully
 
 echo ""
 echo "The follow login failed:"
-cat $SHELL_PATH/auto_ssh.log | grep -Ei "failed|ERROR"
+cat $SHELL_PATH/auto_ssh.log | grep -Ei "failed to login|ERROR"
