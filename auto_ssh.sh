@@ -46,9 +46,9 @@ done < $SHELL_PATH/ip_passwd.txt
 
 echo ""
 echo "Finished!"
-echo "The follow login success:"
+echo "The follow auto login success:"
 cat $SHELL_PATH/auto_ssh.log | grep successfully
 
 echo ""
-echo "The follow login failed:"
+echo "The follow auto login failed:"
 cat $SHELL_PATH/auto_ssh.log | grep -Ei "failed to login|ERROR"
