@@ -16,7 +16,7 @@ if [ $? -eq 0 ];then
   yum install expect -y
 fi
 
-mv -f /root/.ssh/* /tmp/
+rm -f /root/.ssh/*
 ssh-keygen -t rsa -N '' -f /root/.ssh/id_rsa -q
 
 #执行deploy对其他节点免密
