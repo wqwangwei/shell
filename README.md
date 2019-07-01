@@ -1,12 +1,16 @@
 ## Install docker-ce
 ```
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
-wget https://raw.githubusercontent.com/willzhang/shell/master/auto_ssh.sh 
 curl -O https://raw.githubusercontent.com/willzhang/shell/master/shadowsocks/docker_run_ssr.sh && bash docker_run_ssr.sh
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/git-install.sh | sh
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/pull_k8s_images.sh | sh
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/pull-aliyun-images.sh | sh
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/push-aliyun-images.sh | sh
+```
+
+```
+wget https://raw.githubusercontent.com/willzhang/shell/master/auto_ssh.sh 
+wget https://raw.githubusercontent.com/willzhang/shell/master/push_images.sh
 ```
 
 ## 常用命令
