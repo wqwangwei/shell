@@ -25,6 +25,7 @@ sed -i 's/enforcing/disabled/g' /etc/selinux/config
 systemctl stop firewalld.service && systemctl disable firewalld.service
 ```
 
-
+```
 SHELL_NAME=upgrade_centos7_kernel.sh
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/$SHELL_NAME | sh
+```
