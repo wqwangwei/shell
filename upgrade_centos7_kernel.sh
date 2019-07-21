@@ -19,9 +19,9 @@ rpm -qa | grep kernel-tools | xargs yum remove -y
 # 安装新版本工具包
 yum --disablerepo=\* --enablerepo=elrepo-kernel install -y kernel-ml-tools.x86_64 kernel-ml-headers.x86_64 kernel-ml-devel.x86_64
 
-#删除旧版本内核
-rpm -qa | grep kernel-3.10 | xargs yum remove -y
-
 #重启系统验证
 reboot
-#uname -sr
+# uname -sr
+
+#删除旧版本内核
+# rpm -qa | grep kernel-3.10 | xargs yum remove -y
