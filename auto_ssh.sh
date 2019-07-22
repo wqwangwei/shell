@@ -17,7 +17,7 @@ if [ $? -eq 0 ];then
 fi
 
 rm -f /root/.ssh/*
-ssh-keygen -t rsa -N '' -f /root/.ssh/id_rsa -q
+ssh-keygen -t rsa -b 2048 -N '' -f ~/.ssh/id_rsa -q
 
 #执行deploy对其他节点免密
 rm -f $SHELL_PATH/auto_ssh.log
