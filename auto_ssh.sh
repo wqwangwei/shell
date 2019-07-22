@@ -13,7 +13,7 @@ rpm -qa | grep expect >> /dev/null
 if [ $? -eq 0 ];then
   echo "expect already install."
   else
-  yum install expect -y
+  yum install -y expect
 fi
 
 rm -f /root/.ssh/*
