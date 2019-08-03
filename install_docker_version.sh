@@ -20,11 +20,11 @@ yum-config-manager \
 #安装docker
 yum install -y $docker_version
 
-##配置阿里云镜像加速
+##配置镜像加速
 mkdir -p /etc/docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["https://uyah70su.mirror.aliyuncs.com"]
+  "registry-mirrors": ["https://registry.docker-cn.com"]
 }
 EOF
 
