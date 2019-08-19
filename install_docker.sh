@@ -5,7 +5,7 @@ sh get-docker.sh --mirror Aliyun
 mkdir -p /etc/docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["https://registry.docker-cn.com"]
+  "registry-mirrors": ["https://dockerhub.azk8s.cn"]
 }
 EOF
 systemctl enable --now docker
