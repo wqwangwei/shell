@@ -1,3 +1,17 @@
+### Install dokcer-ce
+
+via curl
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+via wget
+sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+Manual inspection
+It's a good idea to inspect the install script from projects you don't yet know. You can do that by downloading the install script first, looking through it so everything looks normal, then running it:
+
+curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+sh install.sh
+
+
+
 ## Install docker-ce
 ```
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
