@@ -1,20 +1,18 @@
-### Install dokcer-ce
+### Install latest version of dokcer-ce
+```
+curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
 
-via curl
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-via wget
-sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-Manual inspection
-It's a good idea to inspect the install script from projects you don't yet know. You can do that by downloading the install script first, looking through it so everything looks normal, then running it:
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh)"
 
-curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+sh -c "$(wget -O- https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh)"
+
+curl -Lo install.sh https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh
 sh install.sh
-
+```
 
 
 ## Install docker-ce
 ```
-curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
 curl -O https://raw.githubusercontent.com/willzhang/shell/master/shadowsocks/docker_run_ssr.sh && bash docker_run_ssr.sh
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/git-install.sh | sh
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/pull_k8s_images.sh | sh
