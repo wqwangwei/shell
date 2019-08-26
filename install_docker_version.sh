@@ -19,7 +19,7 @@ yum install -y $docker_version
 mkdir -p /etc/docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["https://registry.docker-cn.com"]
+  "registry-mirrors": ["https://dockerhub.azk8s.cn"]
 }
 EOF
 
