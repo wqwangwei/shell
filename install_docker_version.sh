@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #install docker-ce
 set -e
 
@@ -12,15 +13,9 @@ yum install -y yum-utils \
 	lvm2 \
 	git
 
-#导入yum源	
-yum-config-manager \
-    --add-repo \
-    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-
-#安装docker
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 yum install -y $docker_version
 
-##配置镜像加速
 mkdir -p /etc/docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
@@ -28,5 +23,4 @@ tee /etc/docker/daemon.json <<-'EOF'
 }
 EOF
 
-##启动docker服务
 systemctl enable --now docker
