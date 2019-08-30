@@ -1,13 +1,9 @@
 #!/bin/bash
-#perpare imagepath.txt and registry
-
-cmd_path=$(cd "$(dirname "$0")";pwd)
-imagepath.txt=$cmd_path/imagepath.txt
-
+#destination registry you want push
 registry=registry.cn-hangzhou.aliyuncs.com/aliwill/
-registry=100.75.30.60
 
-for imagepath in $(cat $imagepath.txt)
+#perpare imagepath.txt at current dir
+for imagepath in $(cat imagepath.txt)
 do
 imagename=$(echo $imagepath | awk -F '/' '{print $NF}')
 docker pull $imagepath
