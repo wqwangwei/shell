@@ -1,8 +1,7 @@
 #!/bin/bash
 #install the latest version of docker-ce
-curl -fsSL https://get.docker.com -o get-docker.sh 
-sh get-docker.sh --mirror Aliyun
-#sh -c $(curl -fsSL https://get.docker.com -o get-docker.sh) --mirror Aliyun
+
+bash <(curl -fsSL https://get.docker.com) --mirror Aliyun
 mkdir -p /etc/docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
