@@ -1,7 +1,7 @@
 ### Install latest version of dokcer-ce
 ```
 curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
-curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker-version.sh | sh
+curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker_version.sh | sh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh)"
 
