@@ -13,6 +13,3 @@ EOF
 
 #start and enable docker
 systemctl enable --now docker
-
-# uninstall docker
-#rpm -qa | grep docker | xargs yum remove -y
