@@ -1,13 +1,15 @@
 #!/bin/bash
-#install the latest version of docker-ce
 
-curl -fsSL https://get.docker.com -o get-docker.sh 
-sh get-docker.sh --mirror Aliyun
+#install the latest version of docker-ce
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+
+#Configuration Mirror Acceleration
 mkdir -p /etc/docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
   "registry-mirrors": ["https://dockerhub.azk8s.cn"]
 }
 EOF
+
+#start and enable docker
 systemctl enable --now docker
-echo 'install finished,run "docker ps" for test!'
