@@ -3,7 +3,6 @@
 echo "123456" | passwd --stdin root >/dev/null 2>&1
 
 #enable password authentication
-sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 systemctl reload sshd
 
