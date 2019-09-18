@@ -28,7 +28,7 @@ systemctl disable --now firewalld >/dev/null 2>&1
 
 # Set Root password
 echo "[TASK 7] Set root password"
-echo "vagrant" | passwd --stdin root >/dev/null 2>&1
+echo "root:123456" | sudo chpasswd >/dev/null 2>&1
 
 # Update hosts file
 echo "[TASK 8] Update /etc/hosts file"
