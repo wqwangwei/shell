@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#install the latest version of docker-ce
+#install latest version of docker-ce
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 
 #Configuration Mirror Acceleration
