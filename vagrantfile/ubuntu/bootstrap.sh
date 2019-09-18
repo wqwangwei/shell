@@ -21,4 +21,4 @@ systemctl reload sshd
 
 # Set Root password
 echo "[TASK 5] Set root password"
-echo "root:123456" | sudo chpasswd >/dev/null 2>&1
+echo "root:vagrant" | sudo chpasswd >/dev/null 2>&1
