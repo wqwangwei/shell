@@ -1,6 +1,6 @@
 ### Install latest version of dokcer-ce
 ```
-curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
+curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
 ```
 
 
@@ -13,5 +13,5 @@ curl -O https://raw.githubusercontent.com/willzhang/shell/master/shadowsocks/doc
 ##update centos kernel
 ```
 SHELL_NAME=upgrade_centos7_kernel.sh
-curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/$SHELL_NAME | sh
+curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/$SHELL_NAME | sh
 ```
