@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# Install desired packages
-yum install -y -q vim wget net-tools epel-release >/dev/null 2>&1
-
 # Install aliyun repo
 curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+
+# Install desired packages
+yum install -y -q vim wget net-tools epel-release >/dev/null 2>&1
 
 # Update the system
 #yum update -y >/dev/null 2>&1
