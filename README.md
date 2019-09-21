@@ -6,7 +6,7 @@ curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/install_dock
 
 ## run ssr
 ```
-curl -O https://raw.githubusercontent.com/willzhang/shell/master/shadowsocks/docker_run_ssr.sh && bash docker_run_ssr.sh
+curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker_ssr.sh | sh
 ```
 
 
