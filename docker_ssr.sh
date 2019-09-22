@@ -1,5 +1,4 @@
 #!/bin/bash
-docker rm -f ssserver
 docker run -dt \
   --name ssserver \
   -p 6443:6443 \
