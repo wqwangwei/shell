@@ -4,6 +4,11 @@ curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/install_dock
 ```
 
 
+### update centos7 kernel
+```
+curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/update_centos7_kernel.sh | sh
+```
+
 ## run ssr
 ```
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker_ssr.sh | sh
