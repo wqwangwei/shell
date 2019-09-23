@@ -17,7 +17,7 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 # 删除旧版本工具包
 rpm -qa | grep kernel-tools | xargs yum remove -y
 # 安装新版本工具包
-yum --disablerepo=\* --enablerepo=elrepo-kernel install -y kernel-ml-tools.x86_64 kernel-ml-headers.x86_64 kernel-ml-devel.x86_64
+yum --disablerepo=\* --enablerepo=elrepo-kernel install -y kernel-ml-{tools,headers,devel}.x86_64
 
 #重启系统验证
 reboot
