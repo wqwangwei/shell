@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#update 
+yum update -y
+
 #install tools
 yum install -y vim wget
 
@@ -12,5 +15,3 @@ curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 systemctl stop firewalld && systemctl disable firewalld &> /dev/null 
 sed -i 's/^SELINUX=enforcing$/SELINUX=disabled/' /etc/selinux/config && setenforce 0
 
-#disable NetworkManager
-systemctl stop NetworkManager && systemctl disable NetworkManager
