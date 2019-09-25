@@ -3,7 +3,8 @@
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 
 #安装ELRepo存储库：
-yum install -y https://www.elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm 
+yum install -y https://www.elrepo.org/elrepo-release-8.0-2.el8.elrepo.noarch.rpm
+#yum install -y https://www.elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm 
 
 #指定ELRepo存储库安装最新的稳定内核
 yum --enablerepo=elrepo-kernel install -y kernel-ml
