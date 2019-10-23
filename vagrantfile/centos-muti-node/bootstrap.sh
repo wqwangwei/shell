@@ -13,12 +13,12 @@ yum install -y -q vim wget net-tools epel-release >/dev/null 2>&1
 sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 systemctl reload sshd
 
+# Set Root password
+echo "root:vagrant" | sudo chpasswd >/dev/null 2>&1
+
 # Disable SELinux
 setenforce 0
 sed -i --follow-symlinks 's/^SELINUX=enforcing/SELINUX=disabled/' /etc/sysconfig/selinux
 
 # Disable and stop firewalld
 systemctl disable --now firewalld >/dev/null 2>&1
-
-# Set Root password
-echo "root:vagrant" | sudo chpasswd >/dev/null 2>&1
