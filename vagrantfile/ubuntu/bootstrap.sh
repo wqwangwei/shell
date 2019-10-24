@@ -16,7 +16,7 @@ sed -i 's#http://archive.ubuntu.com/#http://mirrors.aliyun.com/#g' /etc/apt/sour
 # Enable password authentication
 echo "[TASK 4] Enabling password authentication in sshd config"
 sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
-sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 systemctl reload sshd
 
 # Set Root password
