@@ -23,3 +23,10 @@ echo ">>> Disable SELinux and firewalld"
 setenforce 0
 sed -i --follow-symlinks 's/^SELINUX=enforcing/SELINUX=disabled/' /etc/sysconfig/selinux
 systemctl disable --now firewalld >/dev/null 2>&1
+
+# Update hosts file
+echo ">>> Update /etc/hosts file"
+cat >>/etc/hosts<<EOF
+172.42.42.10 server.example.com server
+172.42.42.20 client.example.com client
+EOF
