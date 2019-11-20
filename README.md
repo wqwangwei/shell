@@ -13,6 +13,11 @@ curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/update_cento
 ## run ssr
 ```
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker_ssr.sh | sh
+
+#default connection info
+port:6443
+password:123456
+Encryption mode：chacha20-ietf-poly1305
 ```
 
 
