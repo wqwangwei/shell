@@ -12,5 +12,4 @@ tee /etc/docker/daemon.json <<-'EOF'
 EOF
 
 #start and enable docker service
-systemctl daemon-reload
-systemctl enable --now docker
+systemctl daemon-reload && systemctl enable --now docker
