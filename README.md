@@ -10,9 +10,9 @@ curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-compo
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/update_centos7_kernel.sh | sh
 ```
 
-## run ssr
+## docker run shadowsocks
 ```
-curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker_ssr.sh | sh
+curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/shadowsocks.sh | sh
 
 #default connection info
 port:6443
