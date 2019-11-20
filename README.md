@@ -1,4 +1,4 @@
-### Install dokcer-ce and docker-compose
+### Install latest version of dokcer-ce and docker-compose
 ```
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-ce.sh | sh
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-compose.sh | sh
