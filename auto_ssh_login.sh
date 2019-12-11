@@ -16,3 +16,5 @@ do
   sshpass -p $PASS ssh-copy-id -o StrictHostKeyChecking=no $USER@$IP
 done < hosts.list
 EOF
+
+sh auto_ssh.sh
