@@ -12,7 +12,7 @@ rpm -qa | grep sshpass >> /dev/null; if [ $? -ne 0 ]; then yum install -y sshpas
 if [ ! -f "/root/.ssh/id_rsa.pub" ]; then echo -e 'y\n' | ssh-keygen -q -t rsa -b 2048 -N "" -f /root/.ssh/id_rsa; fi
 while read IP USER PASS
 do
-  echo ">>> ${IP}"
+  echo -e "\033[32m >>> ${IP} \033[0m"
   sshpass -p $PASS ssh-copy-id -o StrictHostKeyChecking=no $USER@$IP
 done < hosts.list
 EOF
