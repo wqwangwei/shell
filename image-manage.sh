@@ -45,7 +45,7 @@ done
 }
 
 push_image(){
-for imagepath in $image_list
+for image in $image_list
 do
   image_name=${image##*/}
   docker push $registry/$image_name
