@@ -1,0 +1,45 @@
+#!/bin/bash
+harbor_endpoint=localhost
+harbor_username=admin
+harbor_password=Harbor12345
+harbor_schema=http
+KEEP_TAGS_NUM=15
+
+PROJECT=`curl -ksS -u ${harbor_username}:${harbor_password} -X GET -H "Content-Type: application/json" ${harbor_schema}://${harbor_endpoint}/api/projects`
+
+function read_project(){
+while read LINE
+do 
+  PROJECT_ID=`echo ${PROJECT} | jq '.[] | select(.name == "'${LINE}'") | .project_id'`
+  REPO=`curl -ksS -u ${harbor_username}:${harbor_password} -X GET -H "Content-Type: application/json" ${harbor_schema}://${harbor_endpoint}/api/repositories?project_id=${PROJECT_ID}`
+  REPO_NAME=`echo ${REPO} | jq .[].name -r`
+  del_tags
+done < projects.list
+}
+
+function del_tags(){
+for r in ${REPO_NAME};do
+  TAGS=`curl -ksS -u ${harbor_username}:${harbor_password} -X GET -H "Content-Type: application/json" ${harbor_schema}://${harbor_endpoint}/api/repositories/${r}/tags`
+  DEL_TAGS=`echo ${TAGS} | jq .[].name -r | sort -rn| awk 'NR>'${KEEP_TAGS_NUM}' {print}'`
+#如果需要将类型为v123的tag正确排序
+#  DEL_TAGS=`echo ${TAGS} | jq .[].name -r | sed 's/v//g' | sort -rn| awk 'NR>'${KEEP_TAGS_NUM}' {printf("v%s ",$1)}'`
+  if [ -z "${DEL_TAGS}" ]
+  then
+    echo "${harbor_endpoint}/${r}  tags are less than ${KEEP_TAGS_NUM} , nothing to clear."
+  else
+    echo ${harbor_endpoint}/${r}/ ${DEL_TAGS}
+      for t in ${DEL_TAGS};do
+          echo ${harbor_endpoint}/${r}/${t}
+          curl -ksS -u ${harbor_username}:${harbor_password} -X DELETE -w %{http_code}"\n" -H "Content-Type: application/json" ${harbor_schema}://${harbor_endpoint}/api/repositories/${r}/tags/${t}
+      done
+  fi
+done
+}
+
+read_project
+
+#############################
+#生成projects.list可以通过如下脚本
+#PROJECTS=`curl -ksS -u ${harbor_username}:${harbor_password} -X GET -H "Content-Type: application/json" ${harbor_schema}://${harbor_endpoint}/api/projects`
+#echo ${PROJECTS} | jq '.[].name' |sed 's/"//g' > projects.list
+#或者是echo ${PROJECTS} | jq '.[].name -r' > projects.list
