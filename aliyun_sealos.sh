@@ -47,8 +47,8 @@ alias remotecmd="aliyun ecs RunCommand --InstanceId.1 $ID0 --RegionId cn-hongkon
 echo "install sealos command"
 remotecmd "wget https://github.com/fanux/sealos/releases/download/v3.3.3/sealos && chmod +x sealos && mv sealos /usr/bin"
 
-echo "sleep 10s wait for sealos command"
-sleep 10 # wait for IP
+echo "sleep 100s wait for sealos command"
+sleep 100
 version=$1
 pkgurl=$2
 
