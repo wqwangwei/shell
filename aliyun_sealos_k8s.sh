@@ -68,3 +68,5 @@ release_instance() {
   aliyun ecs DeleteInstances --InstanceId.1 $ID2 --RegionId cn-hongkong --Force true
   aliyun ecs DeleteInstances --InstanceId.1 $ID3 --RegionId cn-hongkong --Force true
 }
+
+#release_instance()
