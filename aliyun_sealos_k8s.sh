@@ -4,7 +4,7 @@
 echo "create 4 vms"
 aliyun ecs RunInstances --Amount 4 \
     --ImageId centos_7_7_x64_20G_alibase_20191225.vhd \
-    --InstanceType ecs.t5-lc1m2.large \
+    --InstanceType ecs.c5.large \
     --InternetChargeType PayByTraffic \
     --InternetMaxBandwidthIn 50 \
     --InternetMaxBandwidthOut 50 \
