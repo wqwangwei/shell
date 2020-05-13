@@ -1,5 +1,5 @@
 #!/bin/bash
-# sh test.sh 1.18.2 https://sealyun.oss-cn-beijing.aliyuncs.com/9a8299ea8016abe32e1564a44d5162e4-1.18.2/kube1.18.2.tar.gz
+# sh aliyun_sealos_k8s.sh 1.18.2 https://sealyun.oss-cn-beijing.aliyuncs.com/9a8299ea8016abe32e1564a44d5162e4-1.18.2/kube1.18.2.tar.gz
 
 echo "create 4 vms"
 aliyun ecs RunInstances --Amount 4 \
