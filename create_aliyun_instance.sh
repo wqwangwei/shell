@@ -20,7 +20,7 @@ aliyun ecs RunInstances --Amount $vm_count \
 echo "sleep 30s waiting for instance ip ready"
 sleep 30s
 
-echo "get instance id and ip"
+echo "save instance id and ip to instance.list"
 rm -rf instance.list
 for (( i=0; i < $vm_count; i++ ))
 do 
@@ -40,5 +40,5 @@ done
 #alias remotecmd="aliyun ecs RunCommand --InstanceId.1 $ID0 --RegionId cn-hongkong --Type RunShellScript --CommandContent"
 #remotecmd "yum install -y vim wget"
 
-#release instance
+#release all instance
 #for i in $(cat All_InstanceId.list); do aliyun ecs DeleteInstances --InstanceId.1 $i --RegionId cn-hongkong --Force true; done
