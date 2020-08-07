@@ -7,7 +7,7 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 mkdir -p /etc/docker
 tee /etc/docker/daemon.json <<-'EOF'
 {
-  "registry-mirrors": ["https://dockerhub.azk8s.cn"]
+  "registry-mirrors": ["https://7bafc985f90c43b887a96c2b846cf984.mirror.swr.myhuaweicloud.com"]
 }
 EOF
 
