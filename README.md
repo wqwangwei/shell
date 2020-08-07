@@ -1,4 +1,4 @@
-### Install latest version of dokcer-ce and docker-compose
+### Install latest version of dokcer-ce in centos7 or ubuntu
 ```
 #默认docker
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun && systemctl enable --now docker
@@ -6,6 +6,7 @@ curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun && systemctl 
 #阿里云mirror
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-ce.sh | sh
 
+#docker-compose
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-compose.sh | sh
 ```
 
