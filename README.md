@@ -16,6 +16,7 @@ curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-compo
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/shadowsocks.sh | sh
 
 # install shadowsocks client in windows android or ios
+  # https://shadowsocks.org/en/download/clients.html
   # https://github.com/shadowsocks/shadowsocks-windows/releases
   # https://github.com/shadowsocks/shadowsocks-android/releases
 
