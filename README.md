@@ -1,7 +1,10 @@
 ### Install latest version of dokcer-ce and docker-compose
 ```
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-ce.sh | sh
+
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-compose.sh | sh
+
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun && systemctl enable --now docker
 ```
 
 
