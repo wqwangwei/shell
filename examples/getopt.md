@@ -3,7 +3,7 @@
 
 test.sh
 
-```
+```shell
 #!/bin/bash
   
 TEMP=`getopt -o a:b:c:: -a -l apple:,banana:,cherry: -n "test.sh" -- "$@"`
