@@ -1,3 +1,6 @@
+
+## script example
+
 test.sh
 
 ```
@@ -52,9 +55,9 @@ echo "user: $USER"
 echo "pass: $PASS"
 ```
 
-run script
+## run script example
 ```
-[root@master ~]# sh test.sh --apple 192.168.1.1 --banana root --cherry 123456
+# sh test.sh --apple 192.168.1.1 --banana root --cherry 123456
 ipadd: 192.168.1.1
 user: root
 pass: 123456
