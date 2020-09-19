@@ -10,6 +10,12 @@ curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-ce.sh
 curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-compose.sh | sh
 ```
 
+## retag docker
+```
+wget https://raw.githubusercontent.com/willzhang/shell/master/dockerctl
+sh dockerctl images.txt registry
+```
+
 ## docker run shadowsocks
 ```
 # install shadowsocks server in server side
