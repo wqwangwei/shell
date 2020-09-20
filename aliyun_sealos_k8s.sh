@@ -104,7 +104,7 @@ case "$subcommand" in
     ;;
   deploy)
     create_instance
-    release_instance
+    deploy_k8s
     exit 0
     shift
     ;;
