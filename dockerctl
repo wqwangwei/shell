@@ -4,6 +4,7 @@
 # dockerctl pull images.txt willdockerhub
 # dockerctl tag images.txt willdockerhub
 # dockerctl push images.txt willdockerhub
+# ./dockerctl tag image.list 192.168.1.1:8081/app
 
 script_dir=$(dirname $(readlink -f $0))
 
