@@ -14,8 +14,7 @@ curl -fsSL https://raw.githubusercontent.com/willzhang/shell/master/docker-compo
 ```
 wget https://raw.githubusercontent.com/willzhang/shell/master/dockerctl
 chmod +x dockerctl && mv dockerctl /usr/local/bin
-sh dockerctl images.list registry.cn-shenzhen.aliyuncs.com/kubespherereg
-
+dockerctl run images.list registry.cn-shenzhen.aliyuncs.com/kubespherereg    
 ```
 
 ## docker run shadowsocks
