@@ -7,4 +7,4 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_
 systemctl reload sshd
 
 #install docker
-curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
+#curl -sSL https://raw.githubusercontent.com/willzhang/shell/master/install_docker.sh | sh
