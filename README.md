@@ -3,7 +3,7 @@
 # install docker
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun && systemctl enable --now docker
 
-# install docker with huaweicloud registry mirror
+# install docker with aliyun registry mirror
 curl -fsSL https://raw.githubusercontent.com/wqwangwei/shell/master/docker-ce.sh | sh
 
 # install docker-compose
